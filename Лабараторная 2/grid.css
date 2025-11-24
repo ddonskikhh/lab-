@@ -1,0 +1,266 @@
+/* Базовые стили сетки с использованием Flexbox */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Колонки для мобильных устройств (по умолчанию) */
+.col-1, .col-2, .col-3, .col-4, 
+.col-5, .col-6, .col-7, .col-8, 
+.col-9, .col-10, .col-11, .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px;
+    min-height: 1px;
+}
+
+.col-1 { flex: 0 0 8.33333%; max-width: 8.33333%; }
+.col-2 { flex: 0 0 16.66666%; max-width: 16.66666%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.33333%; max-width: 33.33333%; }
+.col-5 { flex: 0 0 41.66666%; max-width: 41.66666%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.33333%; max-width: 58.33333%; }
+.col-8 { flex: 0 0 66.66666%; max-width: 66.66666%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.33333%; max-width: 83.33333%; }
+.col-11 { flex: 0 0 91.66666%; max-width: 91.66666%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* Блоки для мобильных устройств */
+.block-1 {
+    width: 100%;
+    border: 15px solid #fff;
+    height: 150px;
+    background: #f00;
+}
+
+.block-2 {
+    width: 100%;
+    border: 15px solid #fff;
+    height: 300px;
+    background: #f00;
+}
+
+/* Утилитарные классы для мобильных */
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.pull-left-1 {
+    margin-left: 8.33333%;
+}
+
+.pull-left-2 {
+    margin-left: 16.66666%;
+}
+
+/* Стили для планшетов (768px и выше) */
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+    
+    .col-md-1 { flex: 0 0 8.33333%; max-width: 8.33333%; }
+    .col-md-2 { flex: 0 0 16.66666%; max-width: 16.66666%; }
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-md-4 { flex: 0 0 33.33333%; max-width: 33.33333%; }
+    .col-md-5 { flex: 0 0 41.66666%; max-width: 41.66666%; }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-7 { flex: 0 0 58.33333%; max-width: 58.33333%; }
+    .col-md-8 { flex: 0 0 66.66666%; max-width: 66.66666%; }
+    .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-md-10 { flex: 0 0 83.33333%; max-width: 83.33333%; }
+    .col-md-11 { flex: 0 0 91.66666%; max-width: 91.66666%; }
+    .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+    
+    .block-md-1 {
+        height: 150px;
+    }
+    
+    .block-md-2 {
+        height: 300px;
+    }
+    
+    .block-md-3 {
+        height: 450px;
+    }
+    
+    .pull-left-md-1 {
+        margin-left: 8.33333%;
+    }
+    
+    .pull-left-md-2 {
+        margin-left: 16.66666%;
+    }
+    
+    .d-md-none {
+        display: none;
+    }
+    
+    .d-md-block {
+        display: block;
+    }
+}
+
+/* Стили для десктопов (1200px и выше) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+    
+    .col-lg-1 { flex: 0 0 8.33333%; max-width: 8.33333%; }
+    .col-lg-2 { flex: 0 0 16.66666%; max-width: 16.66666%; }
+    .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-lg-4 { flex: 0 0 33.33333%; max-width: 33.33333%; }
+    .col-lg-5 { flex: 0 0 41.66666%; max-width: 41.66666%; }
+    .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-lg-7 { flex: 0 0 58.33333%; max-width: 58.33333%; }
+    .col-lg-8 { flex: 0 0 66.66666%; max-width: 66.66666%; }
+    .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-lg-10 { flex: 0 0 83.33333%; max-width: 83.33333%; }
+    .col-lg-11 { flex: 0 0 91.66666%; max-width: 91.66666%; }
+    .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+    
+    .block-lg-1 {
+        height: 150px;
+    }
+    
+    .block-lg-2 {
+        height: 300px;
+    }
+    
+    .block-lg-3 {
+        height: 450px;
+    }
+    
+    .pull-left-lg-1 {
+        margin-left: 8.33333%;
+    }
+    
+    .pull-left-lg-2 {
+        margin-left: 16.66666%;
+    }
+    
+    .d-lg-none {
+        display: none;
+    }
+    
+    .d-lg-block {
+        display: block;
+    }
+}
+
+/* Цвета для блоков согласно второму варианту */
+.cl-1 {
+    background: #cd5c5c;
+}
+
+.cl-2 {
+    background: #dc143c;
+}
+
+.cl-3 {
+    background: #8b0000;
+}
+
+.cl-4 {
+    background: #ffc0cb;
+}
+
+.cl-5 {
+    background: #ff69b4;
+}
+
+.cl-6 {
+    background: #c71585;
+}
+
+.cl-7 {
+    background: #32cd32;
+}
+
+.cl-8 {
+    background: #00fa9a;
+}
+
+.cl-9 {
+    background: #2e8b57;
+}
+
+.cl-10 {
+    background: #006400;
+}
+
+.cl-11 {
+    background: #9acd32;
+}
+
+.cl-12 {
+    background: #808000;
+}
+
+.cl-13 {
+    background: #adff2f;
+}
+
+.cl-14 {
+    background: #00ff00;
+}
+
+.cl-15 {
+    background: #ffa07a;
+}
+
+.cl-16 {
+    background: #ff4500;
+}
+
+.cl-17 {
+    background: #ffa500;
+}
+
+.cl-18 {
+    background: #bc8f8f;
+}
+
+.cl-19 {
+    background: #f4a460;
+}
+
+.cl-20 {
+    background: #8b4513;
+}
+
+.cl-21 {
+    background: #d2691e;
+}
+
+.cl-22 {
+    background: #a52a2a;
+}
+
+.cl-23 {
+    background: #800000;
+}
